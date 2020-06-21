@@ -1,0 +1,148 @@
+{
+  "intents": [
+    {
+      "intent": "Anxiety_Helper",
+      "examples": [
+        {
+          "text": "What is anxiety?"
+        },
+        {
+          "text": "I can't \"turn off my mind at night, how do i do that?"
+        },
+        {
+          "text": "Is anxiety a bad thing?"
+        },
+        {
+          "text": "Help am having a panic attack"
+        },
+        {
+          "text": "Should i begin therapy? which type and how long?"
+        },
+        {
+          "text": "What are my treatment options for anxiety?"
+        }
+      ],
+      "description": "Anxiety helper is intended to help individuals who face constant fear of being the less, seen or appreciated."
+    }
+  ],
+  "entities": [],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Severe stress, such as the death of a loved one, divorce, or job loss can also trigger panic attacks. Panic attacks can also be caused by medical conditions and other physical causes."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_6_1592744200331",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome",
+      "previous_sibling": "node_5_1592744433686"
+    },
+    {
+      "type": "standard",
+      "title": "Pain attack",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " mental health disorder characterised by feelings of worry, anxiety or fear that are strong enough to interfere with one's daily activities.\nExamples of anxiety disorders include panic attacks, obsessive-compulsive disorder and post-traumatic stress disorder.\nSymptoms include stress that's out of proportion to the impact of the event, inability to set aside a worry and restlessness.\nTreatment includes counselling or medication, including antidepressants."
+              },
+              {
+                "text": "Feeling nervous, restless or tense\nHaving a sense of impending danger, panic or doom\nHaving an increased heart rate\nBreathing rapidly (hyperventilation)\nSweating\nTrembling\nFeeling weak or tired\nTrouble concentrating or thinking about anything other than the present worry\nHaving trouble sleeping\nExperiencing gastrointestinal (GI) problems\nHaving difficulty controlling worry\nHaving the urge to avoid things that trigger anxiety"
+              },
+              {
+                "text": "Panic disorder involves repeated episodes of sudden feelings of intense anxiety and fear or terror that reach a peak within minutes (panic attacks). You may have feelings of impending doom, shortness of breath, chest pain, or a rapid, fluttering or pounding heart (heart palpitations). These panic attacks may lead to worrying about them happening again or avoiding situations in which they've occurred."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Use deep breathing. ...\nRecognize that you're having a panic attack. ...\nClose your eyes. ...\nPractice mindfulness. ...\nFind a focus object. ...\nUse muscle relaxation techniques. ...\nPicture your happy place."
+              },
+              {
+                "text": " mental health disorder characterised by feelings of worry, anxiety or fear that are strong enough to interfere with one's daily activities.\nExamples of anxiety disorders include panic attacks, obsessive-compulsive disorder and post-traumatic stress disorder.\nSymptoms include stress that's out of proportion to the impact of the event, inability to set aside a worry and restlessness.\nTreatment includes counselling or medication, including antidepressants."
+              },
+              {
+                "text": "Use deep breathing. ...\nRecognize that you're having a panic attack. ...\nClose your eyes. ...\nPractice mindfulness. ...\nFind a focus object. ...\nUse muscle relaxation techniques. ...\nPicture your happy place.\n "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Anxiety_Helper",
+      "dialog_node": "node_6_1592744200331",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "folder",
+      "dialog_node": "node_5_1592744433686"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
